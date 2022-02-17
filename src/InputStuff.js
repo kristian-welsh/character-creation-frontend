@@ -1,7 +1,7 @@
 import {Component} from 'react'
 export default class InputStuff extends Component {
 
-    foo(e) {
+    bar(e) {
         e.preventDefault()
 
         fetch("http://localhost:5000/endpoint", {
@@ -26,7 +26,7 @@ export default class InputStuff extends Component {
         return (
             <div className="InputStuff">
                 <p>Please enter some text:</p>
-                <form onSubmit={this.foo} className="form">
+                <form onSubmit={this.bar} className="form">
                     <label>char name:</label>
                     <input id="charName" type="text" name="thename"></input>
                     <input type="submit" value="Do A Thing"></input>
