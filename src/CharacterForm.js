@@ -1,19 +1,20 @@
 import {Component} from 'react'
-export default class InputStuff extends Component {
+import Textbox from './components/textbox.js'
+
+export default class CharacterForm extends Component {
 
     constructor(props) {
         super(props);
         this.state = { characterName: '' }
 
-        this.handleChange = this.handleChange.bind(this);
+        // this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-    }
+        this.updateCharacterName = this.updateCharacterName.bind(this);
 
-    handleChange(e) {
-        this.setState({ characterName: e.target.value})
     }
 
     callAPI(charName) {
+        console.log(charName)
         fetch("http://localhost:5000/endpoint", {
             method: 'POST',
             headers: {
@@ -39,13 +40,17 @@ export default class InputStuff extends Component {
         this.callAPI(this.state.characterName)
     }
 
+    updateCharacterName(value) {
+        this.setState({ characterName: value })
+    }
+
     render() {
         return (
-            <div className="InputStuff">
+            <div className="CharacterForm">
                 <p>Please enter some text:</p>
                 <form onSubmit={this.handleSubmit} className="form">
                     <label>char name:</label>
-                    <input id="charName" type="text" name="thename" onChange={this.handleChange}></input>
+                    <Textbox updateValue={this.updateCharacterName} />
                     <input type="submit" value="Do A Thing"></input>
                 </form>
             </div>

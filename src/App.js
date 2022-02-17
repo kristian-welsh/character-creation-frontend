@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import InputStuff from './InputStuff';
+import CharacterForm from './CharacterForm';
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
 
     return (
         <div className="App">
-            <InputStuff />
+            <CharacterForm />
         </div>
     );
 }
