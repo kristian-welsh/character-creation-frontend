@@ -1,4 +1,3 @@
-
 class CharacterFormService {
 
     sendForm(charName, charLevel){
@@ -8,7 +7,7 @@ class CharacterFormService {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ name: charName })
+            body: JSON.stringify({ name: charName, level: charLevel })
         }).then(resp => {
             console.log("worked");
             resp.json().then(json => {
@@ -22,3 +21,5 @@ class CharacterFormService {
         });
     }
 }
+
+export default new CharacterFormService()

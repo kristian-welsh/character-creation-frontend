@@ -8,10 +8,10 @@ export default class CharacterForm extends Component {
         super(props);
         this.state = { characterName: '', characterLevel: ''}
 
-        // this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.updateCharacterName = this.updateCharacterName.bind(this);
         this.updateCharacterLevel = this.updateCharacterLevel.bind(this);
+        this.validateLevel = this.validateLevel.bind(this);
     }
 
     handleSubmit(e) {
@@ -35,18 +35,25 @@ export default class CharacterForm extends Component {
         return Number.isInteger(levelNum)
     }
 
+    validateName() {}
+
     render() {
         return (
             <div className="CharacterForm">
                 <p>Please enter some text:</p>
                 <form onSubmit={this.handleSubmit} className="form">
                     <label>char name:</label>
-                    <Textbox updateValue={this.updateCharacterName} />
+                    <Textbox 
+                        updateValue={this.updateCharacterName}
+                        validateValue={this.validateName}
+                        currentValue={this.state.characterName}
+                    />
                     <label>char level:</label>
                     <Textbox 
-                    updateValue={this.updateCharacterLevel}
-                    validateValue={this.validateLevel}
-                    currentValue={this.state.characterLevel}/>
+                        updateValue={this.updateCharacterLevel}
+                        validateValue={this.validateLevel}
+                        currentValue={this.state.characterLevel}
+                    />
                     <input type="submit" value="Do A Thing"></input>
                 </form>
             </div>
