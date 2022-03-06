@@ -9,10 +9,7 @@ export default class Textbox extends Component {
     }
     
     handleChange(e) {
-        if(!this.props.validateValue(e.target.value)) {
-            return
-        }
-        console.log("validated.")
+        this.props.validateValue(e.target.value)
         this.props.updateValue(e.target.value)
     }
 
