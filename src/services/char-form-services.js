@@ -1,7 +1,7 @@
 class CharacterFormService {
 
     sendForm(charName, charLevel){
-        fetch("http://localhost:5000/endpoint", {
+        fetch("http://backend:5000/endpoint", {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
