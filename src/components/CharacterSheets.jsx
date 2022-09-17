@@ -1,11 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import CharacterForm from './CharacterForm';
 
-function App() {
-
-    var foo = "bar"
-
+function CharacterSheets() {
     return (
         <div className="App">
             <CharacterForm />
