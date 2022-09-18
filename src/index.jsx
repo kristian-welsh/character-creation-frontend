@@ -1,10 +1,11 @@
 import React from 'react';
-import CharacterSheets from './CharacterSheets';
+import ReactDOM from 'react-dom';
+import CharacterSheets from './components/CharacterSheets';
 import './index.css';
 
-React.render(
-  <React>
+ReactDOM.render(
+  <React.StrictMode>
     <CharacterSheets />
-  </React>,
+  </React.StrictMode>,
   document.getElementById('root')
 );

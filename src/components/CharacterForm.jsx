@@ -1,8 +1,8 @@
 import {Component, useState} from 'react'
-import Textbox from './textbox.js'
-import CharacterFormService from '../services/char-form-services.js'
+import Textbox from './textbox'
+import CharacterFormService from '../services/char-form-services'
 
-CharacterForm = (props) => {
+const CharacterForm = (props) => {
 
     const [characterName, setCharacterName] = useState(0);
     const [characterLevel, setCharacterLevel] = useState(1);
@@ -22,24 +22,24 @@ CharacterForm = (props) => {
 
     const validateName = () => {}
 
-    const render = () => {
-        return (
-            <div className="CharacterForm">
-                <p>Please enter some text:</p>
-                <form onSubmit={this.handleSubmit} className="form">
-                    <Textbox placeholder = {"Character Name"}
-                        updateValue={setCharacterName}
-                        validateValue={this.validateName}
-                        currentValue={characterName}
-                    />
-                    <Textbox placeholder = {"Character Level"}
-                        updateValue={setCharacterLevel}
-                        validateValue={this.validateLevel}
-                        currentValue={characterLevel}
-                    />
-                    <input type="submit" value="Do A Thing"></input>
-                </form>
-            </div>
-        )
-    }
+	return (
+		<div className="CharacterForm">
+			<p>Please enter some text:</p>
+			<form onSubmit={handleSubmit} className="form">
+				<Textbox placeholder = {"Character Name"}
+					updateValue={setCharacterName}
+					validateValue={validateName}
+					currentValue={characterName}
+				/>
+				<Textbox placeholder = {"Character Level"}
+					updateValue={setCharacterLevel}
+					validateValue={validateLevel}
+					currentValue={characterLevel}
+				/>
+				<input type="submit" value="Do A Thing"></input>
+			</form>
+		</div>
+	)
 }
+
+export default CharacterForm

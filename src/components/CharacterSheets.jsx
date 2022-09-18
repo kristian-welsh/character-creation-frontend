@@ -1,12 +1,12 @@
-import './App.css';
+import './CharacterSheets.css';
 import CharacterForm from './CharacterForm';
 
 function CharacterSheets() {
     return (
-        <div className="App">
+        <div className="CharacterSheets">
             <CharacterForm />
         </div>
     );
 }
 
-export default App;
+export default CharacterSheets;
