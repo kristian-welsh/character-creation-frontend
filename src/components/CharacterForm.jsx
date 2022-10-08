@@ -1,11 +1,14 @@
-import {Component, useState} from 'react'
+import {useState} from 'react'
 import Textbox from './textbox'
+import Dropdown from './dropdown'
 import CharacterFormService from '../services/char-form-services'
 
 const CharacterForm = (props) => {
 
-    const [characterName, setCharacterName] = useState(0);
-    const [characterLevel, setCharacterLevel] = useState(1);
+	const classList = ["Artificier", "Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Paladin", "Monk", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"];
+
+    const [characterName, setCharacterName] = useState();
+    const [characterLevel, setCharacterLevel] = useState();
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -26,15 +29,20 @@ const CharacterForm = (props) => {
 		<div className="CharacterForm">
 			<p>Please enter some text:</p>
 			<form onSubmit={handleSubmit} className="form">
-				<Textbox placeholder = {"Character Name"}
+				<Textbox id = {"CharacterName"}
 					updateValue={setCharacterName}
 					validateValue={validateName}
 					currentValue={characterName}
 				/>
-				<Textbox placeholder = {"Character Level"}
+				<Textbox id = {"CharacterLevel"}
 					updateValue={setCharacterLevel}
 					validateValue={validateLevel}
 					currentValue={characterLevel}
+				/>
+				<Dropdown
+					id="CharacterClass"
+					defaultValue="Choose class"
+					choices={classList}
 				/>
 				<input type="submit" value="Do A Thing"></input>
 			</form>
