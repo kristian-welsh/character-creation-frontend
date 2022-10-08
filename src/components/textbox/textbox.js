@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import './styles.css';
 
 export default class Textbox extends Component {
 
@@ -15,7 +16,7 @@ export default class Textbox extends Component {
 
     render() {
         return (
-            <input id="charName" type="text" name="thename" onChange={this.handleChange} value={this.props.currentValue}></input>
+            <input id="textBox" type="text" name="thename" onChange={this.handleChange} value={this.props.currentValue}></input>
         );
     }   
 }

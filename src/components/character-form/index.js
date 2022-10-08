@@ -1,6 +1,7 @@
 import {Component} from 'react'
-import Textbox from './components/textbox.js'
-import CharacterFormService from './services/char-form-services.js'
+import Textbox from '../textbox/textbox.js'
+import CharacterFormService from '../../services/char-form-services.js'
+import './styles.css';
 
 export default class CharacterForm extends Component {
 
@@ -29,10 +30,19 @@ export default class CharacterForm extends Component {
         this.setState({ characterLevel: value })
     }
 
+    updateCharacterStrength(value) {
+        this.setState({ characterStrength: value})
+    }
+
     validateLevel(value) {
         let levelNum = Number(value)
         console.log(Number.isInteger(levelNum))
         return Number.isInteger(levelNum)
+    }
+    validateStrength(value) {
+        let strnum = Number(value)
+        console.log(Number.isInteger(strnum))
+        return Number.isInteger(strnum)
     }
 
     validateName() {}
@@ -54,7 +64,30 @@ export default class CharacterForm extends Component {
                         validateValue={this.validateLevel}
                         currentValue={this.state.characterLevel}
                     />
-                    <input type="submit" value="Do A Thing"></input>
+                    <div className="divide"/>
+                    <label>Strength:</label>
+                    <Textbox 
+                        updateValue={this.updateCharacterStrength}
+                        validateValue={this.validateStrength}
+                        currentValue={this.state.characterStrength}
+                    />
+                    <label>Dexterity:</label>
+                    <Textbox
+                    />
+                    <label>Constitution:</label>
+                    <Textbox
+                    />
+                    <label>Intelligence:</label>
+                    <Textbox
+                    />
+                    <label>Wisdom:</label>
+                    <Textbox
+                    />
+                    <label>Charisma:</label>
+                    <Textbox
+                    />
+                    <div className="divide"/>
+                    <input type="submit" value="Submit"></input>
                 </form>
             </div>
         )
