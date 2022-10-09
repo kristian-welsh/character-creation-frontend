@@ -1,7 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./styles.css";
+import reportWebVitals from "./reportWebVitals";
+
 import Home from "./pages/home";
+
+import "./styles.css";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -9,3 +12,5 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
+
+reportWebVitals();
