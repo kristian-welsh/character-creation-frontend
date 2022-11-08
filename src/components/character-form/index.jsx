@@ -7,36 +7,42 @@ import CharacterFormService from "../../services/char-form-services.js";
 import "./styles.css";
 
 const CharacterForm = () => {
-  const [characterName, setCharacterName] = useState("");
-  const [characterLevel, setCharacterLevel] = useState(1);
+  const [characterDetails, setCharacterDetails] = useState({
+    form: "character-details",
+    characterName: "",
+    characterLevel: "",
+  });
 
   const handleSubmit = () => {
-    CharacterFormService.sendForm(characterName, characterLevel);
+    console.log(characterDetails);
+    CharacterFormService.sendForm(characterDetails);
   };
-
-  function updateCharacterName(value) {
-    setCharacterName(value);
-  }
-
-  function updateCharacterLevel(value) {
-    setCharacterLevel(value);
-  }
 
   return (
     <div className="wrapper">
       <p>Please enter some text:</p>
-      <form onSubmit={handleSubmit()} className="form">
+      <form className="form">
         <label>char name:</label>
         <Textbox
-          updateValue={updateCharacterName}
+          updateValue={(value) =>
+            setCharacterDetails({
+              ...characterDetails,
+              characterName: value,
+            })
+          }
           validateValue={validateString}
-          value={characterName}
+          value={characterDetails["characterName"]}
         />
         <label>char level:</label>
         <Textbox
-          updateValue={updateCharacterLevel}
+          updateValue={(value) =>
+            setCharacterDetails({
+              ...characterDetails,
+              characterLevel: value,
+            })
+          }
           validateValue={validateNumber}
-          value={characterLevel}
+          value={characterDetails["characterLevel"]}
         />
         <div className="divide" />
         <label>Strength:</label>
@@ -52,7 +58,7 @@ const CharacterForm = () => {
         <label>Charisma:</label>
         <Textbox />
         <div className="divide" />
-        <input type="submit" value="Submit"></input>
+        <input type="button" onClick={handleSubmit} value="Submit" />
       </form>
     </div>
   );
