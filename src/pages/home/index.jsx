@@ -1,5 +1,5 @@
 import "./styles.css";
-import CharacterForm from "./../../components/character-form";
+import CharacterForm from "../../forms/character-form";
 
 const Home = () => {
   return (

@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { validateNumber, validateString } from "./../../helpers/validate";
 
-import Textbox from "./../textbox";
-import CharacterFormService from "../../services/char-form-services.js";
+import Textbox from "./../../components/textbox";
+import Button from "./../../components/button";
+
+import CharacterFormService from "./../../services/char-form-services.js";
 
 import "./styles.css";
 
@@ -58,7 +60,7 @@ const CharacterForm = () => {
         <label>Charisma:</label>
         <Textbox />
         <div className="divide" />
-        <input type="button" onClick={handleSubmit} value="Submit" />
+        <Button value="Submit" onClick={handleSubmit} />
       </form>
     </div>
   );
