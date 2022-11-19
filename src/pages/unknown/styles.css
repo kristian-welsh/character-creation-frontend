@@ -1,4 +1,4 @@
 .wrapper {
   text-align: center;
-  background-color: #7cbcce8f;
+  background-color: var(--beigeP1);
 }
