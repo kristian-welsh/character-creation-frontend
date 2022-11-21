@@ -3,9 +3,9 @@ import "./styles.css";
 const Unknown = () => {
   return (
     <div className="wrapper">
-      <h6>
+      <p>
         We couldn't find this URL. Please return to the home page to try again.
-      </h6>
+      </p>
     </div>
   );
 };

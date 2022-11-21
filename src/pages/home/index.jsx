@@ -1,12 +1,7 @@
 import "./styles.css";
-import CharacterForm from "../../forms/character-form";
 
 const Home = () => {
-  return (
-    <div className="wrapper">
-      <CharacterForm />
-    </div>
-  );
+  return <div className="wrapper">Home</div>;
 };
 
 export default Home;
