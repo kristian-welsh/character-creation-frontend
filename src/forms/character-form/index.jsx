@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { validateNumber, validateString } from "./../../helpers/validate";
 
-import Textbox from "./../../components/textbox";
+import InputText from "./../../components/input-text";
 import Button from "./../../components/button";
 
 import CharacterFormService from "./../../services/char-form-services.js";
@@ -25,7 +25,7 @@ const CharacterForm = () => {
       <p>Please enter some text:</p>
       <form className="form">
         <label>char name:</label>
-        <Textbox
+        <InputText
           updateValue={(value) =>
             setCharacterDetails({
               ...characterDetails,
@@ -36,7 +36,7 @@ const CharacterForm = () => {
           value={characterDetails["characterName"]}
         />
         <label>char level:</label>
-        <Textbox
+        <InputText
           updateValue={(value) =>
             setCharacterDetails({
               ...characterDetails,
@@ -48,17 +48,17 @@ const CharacterForm = () => {
         />
         <div className="divide" />
         <label>Strength:</label>
-        <Textbox />
+        <InputText />
         <label>Dexterity:</label>
-        <Textbox />
+        <InputText />
         <label>Constitution:</label>
-        <Textbox />
+        <InputText />
         <label>Intelligence:</label>
-        <Textbox />
+        <InputText />
         <label>Wisdom:</label>
-        <Textbox />
+        <InputText />
         <label>Charisma:</label>
-        <Textbox />
+        <InputText />
         <div className="divide" />
         <Button value="Submit" onClick={handleSubmit} />
       </form>
