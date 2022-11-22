@@ -1,6 +1,6 @@
 import "./styles.css";
 
-const Textbox = ({ updateValue, validateValue, value }) => {
+const InputText = ({ updateValue, validateValue, value }) => {
   function handleChange(e) {
     validateValue(e.target.value);
     updateValue(e.target.value);
@@ -17,4 +17,4 @@ const Textbox = ({ updateValue, validateValue, value }) => {
   );
 };
 
-export default Textbox;
+export default InputText;

@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Lora';
-  src: url('../fonts/Lora-Regular.ttf');
+  src: url('./../assets/fonts/Lora-Regular.ttf');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'LoraSemiBold';
-  src: url('../fonts/Lora-SemiBold.ttf');
+  src: url('./../assets/fonts/Lora-SemiBold.ttf');
   font-style: normal;
   font-weight: 600;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'LoraBold';
-  src: url('../fonts/Lora-Bold.ttf');
+  src: url('./../assets/fonts/Lora-Bold.ttf');
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('../fonts/Quicksand-Regular.ttf');
+  src: url('./../assets/fonts/Quicksand-Regular.ttf');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
   font-family: 'QuicksandSemiBold';
-  src: url('../fonts/Quicksand-SemiBold.ttf');
+  src: url('./../assets/fonts/Quicksand-SemiBold.ttf');
   font-style: normal;
   font-weight: 600;
   font-display: swap;
@@ -40,7 +40,7 @@
 
 @font-face {
   font-family: 'QuicksandBold';
-  src: url('../fonts/Quicksand-Bold.ttf');
+  src: url('./../assets/fonts/Quicksand-Bold.ttf');
   font-style: normal;
   font-weight: 700;
   font-display: swap;
