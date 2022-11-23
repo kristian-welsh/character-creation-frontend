@@ -1,5 +1,6 @@
-import ContentTwocol from "../../components/content-two-col";
 import "./styles.css";
+
+import ContentTwocol from "../../components/content-two-col";
 
 import { topContent } from "./data";
 

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import images from "./../../styles/images";
 import "./styles.css";
 
 const HeaderWebsite = () => {
@@ -6,42 +8,42 @@ const HeaderWebsite = () => {
       <div className="headerContent">
         <div className="left">
           <div className="logoWrapper">
-            <a href="/" passHref>
+            <Link to="/">
               <img
-                src="./assets/DumpStat-logo.png"
-                alt="Company logo"
-                width={180}
+                src={images.DumpStatLogo}
+                alt={images.DumpStatLogo}
+                width={240}
               />
-            </a>
+            </Link>
           </div>
           <div className="links">
-            <a href="/character-creation" passHref>
-              <h4 className="linkText">Creator</h4>
-            </a>
-            <a href="/character-vault" passHref>
-              <h4 className="linkText">Vault</h4>
-            </a>
-            <a href="/appearance" passHref>
-              <h4 className="linkText">Appearance</h4>
-            </a>
-            <a href="/combat-cards" passHref>
-              <h4 className="linkText">Combat cards</h4>
-            </a>
-            <a href="/about" passHref>
-              <h4 className="linkText">About</h4>
-            </a>
+            <Link to="/character-creation">
+              <h5 className="linkText">Creator</h5>
+            </Link>
+            <Link to="/character-vault">
+              <h5 className="linkText">Vault</h5>
+            </Link>
+            <Link to="/appearance">
+              <h5 className="linkText">Appearance</h5>
+            </Link>
+            <Link to="/combat-cards">
+              <h5 className="linkText">Combat cards</h5>
+            </Link>
+            <Link to="/about">
+              <h5 className="linkText">About</h5>
+            </Link>
           </div>
         </div>
         <div className="right">
           <div className="links">
-            <a href="/login" passHref>
-              <h4 className="linkText">Login</h4>
-            </a>
+            <Link to="/login">
+              <h5 className="linkText">Login</h5>
+            </Link>
           </div>
           <div className="links">
-            <a href="/registration" passHref>
-              <h4 className="linkText">Sign Up</h4>
-            </a>
+            <Link to="/sign-up">
+              <h5 className="linkText">Sign Up</h5>
+            </Link>
           </div>
         </div>
       </div>

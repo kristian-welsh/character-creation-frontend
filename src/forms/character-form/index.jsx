@@ -22,44 +22,38 @@ const CharacterForm = () => {
 
   return (
     <div className="wrapper">
-      <p>Please enter some text:</p>
-      <form className="form">
-        <label>char name:</label>
-        <InputText
-          updateValue={(value) =>
-            setCharacterDetails({
-              ...characterDetails,
-              characterName: value,
-            })
-          }
-          validateValue={validateString}
-          value={characterDetails["characterName"]}
-        />
-        <label>char level:</label>
-        <InputText
-          updateValue={(value) =>
-            setCharacterDetails({
-              ...characterDetails,
-              characterLevel: value,
-            })
-          }
-          validateValue={validateNumber}
-          value={characterDetails["characterLevel"]}
-        />
-        <div className="divide" />
-        <label>Strength:</label>
-        <InputText />
-        <label>Dexterity:</label>
-        <InputText />
-        <label>Constitution:</label>
-        <InputText />
-        <label>Intelligence:</label>
-        <InputText />
-        <label>Wisdom:</label>
-        <InputText />
-        <label>Charisma:</label>
-        <InputText />
-        <div className="divide" />
+      <form className="char-creator-foundations">
+        <div className="c-c-header">
+          <p className="t3">Welcome to the character creator!</p>
+        </div>
+        <div className="c-c-section1">
+          <label>
+            <p className="t4">Character Name:</p>
+          </label>
+          <InputText
+            updateValue={(value) =>
+              setCharacterDetails({
+                ...characterDetails,
+                characterName: value,
+              })
+            }
+            validateValue={validateString}
+            value={characterDetails["characterName"]}
+          />
+          <label>
+            <p className="t4">Character Level:</p>
+          </label>
+          <InputText
+            updateValue={(value) =>
+              setCharacterDetails({
+                ...characterDetails,
+                characterLevel: value,
+              })
+            }
+            validateValue={validateNumber}
+            value={characterDetails["characterLevel"]}
+          />
+        </div>
         <Button value="Submit" onClick={handleSubmit} />
       </form>
     </div>
