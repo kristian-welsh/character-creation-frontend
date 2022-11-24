@@ -23,11 +23,11 @@ const HeaderWebsite = () => {
             <Link to="/character-vault">
               <h5 className="linkText">Vault</h5>
             </Link>
-            <Link to="/appearance">
-              <h5 className="linkText">Appearance</h5>
+            <Link to="/ai-visuals">
+              <h5 className="linkText">AI Visuals</h5>
             </Link>
             <Link to="/combat-cards">
-              <h5 className="linkText">Combat cards</h5>
+              <h5 className="linkText">Combat Cards</h5>
             </Link>
             <Link to="/about">
               <h5 className="linkText">About</h5>
