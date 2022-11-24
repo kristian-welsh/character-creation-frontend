@@ -18,6 +18,7 @@ const ContentTwocol = ({ data }) => {
             src={images[data.leftImage]}
             alt={images[data.leftImage]}
             width={600}
+            className="ctcLeftImage"
           />
         ) : null}
       </div>
@@ -34,7 +35,8 @@ const ContentTwocol = ({ data }) => {
           <img
             src={images[data.rightImage]}
             alt={images[data.rightImage]}
-            width={600}
+            height={500}
+            className="ctcRightImage"
           />
         ) : null}
       </div>

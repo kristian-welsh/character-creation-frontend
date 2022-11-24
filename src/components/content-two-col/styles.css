@@ -9,7 +9,7 @@
 .ctcLeft {
   float: left; 
   width: 50%;
-  padding: 10px;
+  padding: 10px 10px 100px 10px;
   text-align: left;
 }
 
@@ -18,4 +18,12 @@
   width: 50%;
   padding: 10px;
   text-align: left;
+}
+
+.ctcLeftImage {
+  padding-right: 100px;
+}
+
+.ctcRightImage {
+  padding-left: 100px;
 }

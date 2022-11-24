@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Website from "./../templates/website";
 
 import About from "./../pages/about";
-import Appearance from "./../pages/appearance";
+import AiVisuals from "./../pages/ai-visuals";
 import CharacterVault from "./../pages/character-vault";
 import CharacterCreation from "./../pages/character-creation";
 import CombatCards from "../pages/combat-cards";
@@ -20,7 +20,7 @@ const Router = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/appearance" element={<Appearance />} />
+          <Route path="/ai-visuals" element={<AiVisuals />} />
           <Route path="/character-creation" element={<CharacterCreation />} />
           <Route path="/character-vault" element={<CharacterVault />} />
           <Route path="/combat-cards" element={<CombatCards />} />
