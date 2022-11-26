@@ -1,10 +1,10 @@
 import * as S from "./styled";
 
-const Button = ({ value = "Continue", onClick = null, disabled = false }) => {
+const Button = ({ value = "Continue", handleClick, disabled = false }) => {
   return (
     <S.StyledButton
       type="button"
-      onClick={onClick}
+      handleClick={handleClick}
       value={value}
       className="button"
     />
