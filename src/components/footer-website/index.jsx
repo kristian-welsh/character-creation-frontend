@@ -1,7 +1,7 @@
-import "./styles.css";
+import * as S from "./styled";
 
 const FooterWebsite = () => {
-  return <div className="footer"></div>;
+  return <S.Wrapper></S.Wrapper>;
 };
 
 export default FooterWebsite;

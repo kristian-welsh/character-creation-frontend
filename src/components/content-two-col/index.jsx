@@ -1,46 +1,44 @@
-import "./styles.css";
+import * as S from "./styled";
 import images from "./../../styles/images";
 
 const ContentTwocol = ({ data }) => {
   return (
-    <div className="ctcWrapper">
-      <div className="ctcLeft">
+    <S.Wrapper>
+      <S.Left>
         {data.leftText
           ? data.leftText.map((row) => (
               <div>
-                <p className="t4">{row}</p>
+                <S.Text>{row}</S.Text>
                 <br />
               </div>
             ))
           : null}
         {data.leftImage ? (
-          <img
+          <S.LeftImage
             src={images[data.leftImage]}
             alt={images[data.leftImage]}
             width={600}
-            className="ctcLeftImage"
           />
         ) : null}
-      </div>
-      <div className="ctcRight">
+      </S.Left>
+      <S.Right>
         {data.rightText
           ? data.rightText.map((row) => (
               <div>
-                <p className="t4">{row}</p>
+                <S.Text>{row}</S.Text>
                 <br />
               </div>
             ))
           : null}
         {data.rightImage ? (
-          <img
+          <S.RightImage
             src={images[data.rightImage]}
             alt={images[data.rightImage]}
             height={500}
-            className="ctcRightImage"
           />
         ) : null}
-      </div>
-    </div>
+      </S.Right>
+    </S.Wrapper>
   );
 };
 

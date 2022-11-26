@@ -1,10 +1,12 @@
-import "./styles.css";
+import * as S from "./styled.js";
+
+import Quote from "./../../components/quote/index.jsx";
 
 const CombatCards = () => {
   return (
-    <div className="wrapper">
-      <p className="t4">Combat Cards :)</p>
-    </div>
+    <S.Wrapper>
+      <Quote text={"Combat Cards"} />
+    </S.Wrapper>
   );
 };
 

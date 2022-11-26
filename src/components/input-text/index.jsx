@@ -1,4 +1,4 @@
-import "./styles.css";
+import * as S from "./styled.js";
 
 const InputText = ({ updateValue, validateValue, value }) => {
   function handleChange(e) {
@@ -7,7 +7,7 @@ const InputText = ({ updateValue, validateValue, value }) => {
   }
 
   return (
-    <input
+    <S.TextBox
       className="textBox"
       type="text"
       name="textbox"

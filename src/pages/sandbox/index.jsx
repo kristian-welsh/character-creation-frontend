@@ -1,13 +1,12 @@
-import "./styles.css";
+import * as S from "./styled.js";
 
-import Button from "./../../components/button";
+import Quote from "./../../components/quote/index.jsx";
 
 const Sandbox = () => {
   return (
-    <div className="wrapper">
-      <h1>George's sandbox</h1>
-      <Button label="Submit" />
-    </div>
+    <S.Wrapper>
+      <Quote text={"Secret Testing Page"} />
+    </S.Wrapper>
   );
 };
 
