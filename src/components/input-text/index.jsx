@@ -1,8 +1,7 @@
 import * as S from "./styled.js";
 
-const InputText = ({ updateValue, validateValue, value, placeholder }) => {
+const InputText = ({ updateValue, value, placeholder }) => {
   function handleChange(e) {
-    validateValue(e.target.value);
     updateValue(e.target.value);
   }
 

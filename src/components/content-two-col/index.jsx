@@ -6,8 +6,8 @@ const ContentTwocol = ({ data }) => {
     <S.Wrapper>
       <S.Left>
         {data.leftText
-          ? data.leftText.map((row) => (
-              <div>
+          ? data.leftText.map((row, i) => (
+              <div key={i}>
                 <S.Text>{row}</S.Text>
                 <br />
               </div>
@@ -23,8 +23,8 @@ const ContentTwocol = ({ data }) => {
       </S.Left>
       <S.Right>
         {data.rightText
-          ? data.rightText.map((row) => (
-              <div>
+          ? data.rightText.map((row, i) => (
+              <div key={i}>
                 <S.Text>{row}</S.Text>
                 <br />
               </div>
