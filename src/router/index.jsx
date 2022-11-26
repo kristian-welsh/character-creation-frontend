@@ -6,6 +6,7 @@ import About from "./../pages/about";
 import AiVisuals from "./../pages/ai-visuals";
 import CharacterVault from "./../pages/character-vault";
 import CharacterCreation from "./../pages/character-creation";
+import CharacterForm from "./../pages/character-form";
 import CombatCards from "../pages/combat-cards";
 import Home from "./../pages/home";
 import Login from "./../pages/login";
@@ -22,6 +23,7 @@ const Router = () => {
           <Route path="/about" element={<About />} />
           <Route path="/ai-visuals" element={<AiVisuals />} />
           <Route path="/character-creation" element={<CharacterCreation />} />
+          <Route path="/character-form" element={<CharacterForm />} />
           <Route path="/character-vault" element={<CharacterVault />} />
           <Route path="/combat-cards" element={<CombatCards />} />
           <Route path="/login" element={<Login />} />
