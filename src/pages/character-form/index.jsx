@@ -12,8 +12,7 @@ const CharacterForm = () => {
   const [step, setStep] = useState(0);
 
   const handleSubmit = () => {
-    console.log("characterDetails");
-    setStep(step++);
+    setStep(step + 1);
     CharacterFormService.sendForm(characterDetails);
   };
 

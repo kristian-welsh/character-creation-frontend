@@ -4,11 +4,11 @@ import InputText from "./../../components/input-text";
 import Button from "./../../components/button";
 import Quote from "./../../components/quote";
 
-const CharacterFoundations = (
+const CharacterFoundations = ({
   characterDetails,
   setCharacterDetails,
-  handleSubmit
-) => {
+  handleSubmit,
+}) => {
   return (
     <S.Wrapper>
       <Quote text={"Character Foundations"} />
@@ -37,7 +37,7 @@ const CharacterFoundations = (
             />
           </S.Field>
         </S.Row>
-        <Button value="To Attributes" onClick={handleSubmit} />
+        <Button value="To Attributes" handleSubmit={handleSubmit} />
       </S.StyledForm>
     </S.Wrapper>
   );
