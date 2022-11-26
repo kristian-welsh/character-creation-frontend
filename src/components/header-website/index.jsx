@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import images from "./../../styles/images";
-import "./styles.css";
+import * as S from "./styled.js";
 
 const HeaderWebsite = () => {
   return (
-    <div className="header">
-      <div className="headerContent">
-        <div className="left">
-          <div className="logoWrapper">
+    <S.Wrapper>
+      <S.Content>
+        <S.Left>
+          <S.LogoWrapper>
             <Link to="/">
               <img
                 src={images.DumpStatLogo}
@@ -15,39 +15,39 @@ const HeaderWebsite = () => {
                 width={240}
               />
             </Link>
-          </div>
-          <div className="links">
+          </S.LogoWrapper>
+          <S.Links>
             <Link to="/character-creation">
-              <h5 className="linkText">Creator</h5>
+              <S.LinkText>Creator</S.LinkText>
             </Link>
             <Link to="/character-vault">
-              <h5 className="linkText">Vault</h5>
+              <S.LinkText>Vault</S.LinkText>
             </Link>
             <Link to="/ai-visuals">
-              <h5 className="linkText">AI Visuals</h5>
+              <S.LinkText>AI Visuals</S.LinkText>
             </Link>
             <Link to="/combat-cards">
-              <h5 className="linkText">Combat Cards</h5>
+              <S.LinkText>Combat Cards</S.LinkText>
             </Link>
             <Link to="/about">
-              <h5 className="linkText">About</h5>
+              <S.LinkText>About</S.LinkText>
             </Link>
-          </div>
-        </div>
-        <div className="right">
-          <div className="links">
+          </S.Links>
+        </S.Left>
+        <S.Right>
+          <S.Links>
             <Link to="/login">
-              <h5 className="linkText">Login</h5>
+              <S.LinkText>Login</S.LinkText>
             </Link>
-          </div>
-          <div className="links">
+          </S.Links>
+          <S.Links>
             <Link to="/sign-up">
-              <h5 className="linkText">Sign Up</h5>
+              <S.LinkText>Sign Up</S.LinkText>
             </Link>
-          </div>
-        </div>
-      </div>
-    </div>
+          </S.Links>
+        </S.Right>
+      </S.Content>
+    </S.Wrapper>
   );
 };
 

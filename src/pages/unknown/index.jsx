@@ -1,12 +1,12 @@
-import "./styles.css";
+import * as S from "./styled.js";
 
 const Unknown = () => {
   return (
-    <div className="wrapper">
-      <p>
-        We couldn't find this URL. Please return to the home page to try again.
-      </p>
-    </div>
+    <S.Wrapper>
+      <S.Text>
+        404: We couldn't find that page. Click here to return to the homepage.
+      </S.Text>
+    </S.Wrapper>
   );
 };
 

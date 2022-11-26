@@ -1,11 +1,12 @@
-import "./styles.css";
-import CharacterForm from "../../forms/character-form";
+import * as S from "./styled.js";
+
+import Quote from "./../../components/quote/index.jsx";
 
 const CharacterCreation = () => {
   return (
-    <div className="wrapper">
-      <CharacterForm />
-    </div>
+    <S.Wrapper>
+      <Quote text={"Character Creation"} />
+    </S.Wrapper>
   );
 };
 

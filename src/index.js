@@ -4,10 +4,11 @@ import reportWebVitals from "./reportWebVitals";
 
 import Router from "./router";
 
-import "./styles/globals.css";
+import { GlobalStyle } from "./styles";
 
 ReactDOM.render(
   <React.StrictMode>
+    <GlobalStyle />
     <Router />
   </React.StrictMode>,
   document.getElementById("root")

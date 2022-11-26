@@ -1,4 +1,4 @@
-import "./styles.css";
+import * as S from "./styled.js";
 
 import ContentTwocol from "../../components/content-two-col";
 
@@ -6,9 +6,9 @@ import { topContent } from "./data";
 
 const Home = () => {
   return (
-    <div className="wrapper">
+    <S.Wrapper>
       <ContentTwocol data={topContent.data} />
-    </div>
+    </S.Wrapper>
   );
 };
 

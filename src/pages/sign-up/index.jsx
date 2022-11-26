@@ -1,10 +1,12 @@
-import "./styles.css";
+import * as S from "./styled.js";
+
+import Quote from "./../../components/quote/index.jsx";
 
 const SignUp = () => {
   return (
-    <div className="wrapper">
-      <p className="t4">Sign Up :)</p>
-    </div>
+    <S.Wrapper>
+      <Quote text={"Sign Up"} />
+    </S.Wrapper>
   );
 };
 
