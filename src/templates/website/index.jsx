@@ -7,7 +7,7 @@ const Website = ({ children }) => {
   return (
     <S.Wrapper>
       <HeaderWebsite />
-      {children}
+      <S.ContentWrap>{children}</S.ContentWrap>
       <FooterWebsite />
     </S.Wrapper>
   );

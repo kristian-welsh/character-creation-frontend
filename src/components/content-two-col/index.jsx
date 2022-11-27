@@ -17,7 +17,7 @@ const ContentTwocol = ({ data }) => {
           <S.LeftImage
             src={images[data.leftImage]}
             alt={images[data.leftImage]}
-            width={600}
+            height={500}
           />
         ) : null}
       </S.Left>

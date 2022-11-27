@@ -21,6 +21,7 @@ export const colors = {
   brown: "#4F2818",
   brownM1: "#603d2f",
   brownM2: "#725246",
+  orangeBrown: "#bc742e",
   redP2: "#d30e0e",
   redP1: "#bc0c0c",
   red: "#eb1010",

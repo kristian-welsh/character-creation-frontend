@@ -1,6 +1,6 @@
 import * as S from "./styled.js";
 
-import Quote from "./../../components/quote/index.jsx";
+import Quote from "./../../components/quote";
 
 const CombatCards = () => {
   return (

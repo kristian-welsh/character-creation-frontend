@@ -3,7 +3,7 @@ import * as S from "./styled.js";
 
 import CharacterFormService from "./../../services/char-form-services.js";
 
-import CharacterFoundations from "./../../forms/character-foundations/index.jsx";
+import CharacterFoundations from "./../../forms/character-foundations";
 
 const CharacterForm = () => {
   const [characterDetails, setCharacterDetails] = useState({

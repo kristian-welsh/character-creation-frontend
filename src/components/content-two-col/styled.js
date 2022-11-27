@@ -12,7 +12,7 @@ export const Wrapper = Styled.div`
 export const Left = Styled.div`
   float: left;
   width: 50%;
-  padding: 10px 10px 100px 10px;
+  padding: 10px;
   text-align: left;
 `;
 
@@ -24,11 +24,11 @@ export const Right = Styled.div`
 `;
 
 export const LeftImage = Styled.img`
-  padding-right: 100px;
+  padding-right: 200px;
 `;
 
 export const RightImage = Styled.img`
-  padding-left: 100px;
+  padding-left: 200px;
 `;
 
 export const Text = Styled(T.P4)``;
