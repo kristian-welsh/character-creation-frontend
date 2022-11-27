@@ -4,8 +4,9 @@ import { colors } from "./../../styles";
 
 export const Wrapper = styled.div`
   background-color: ${colors.brown};
-  height: 120px;
+  height: 100px;
   width: 100%;
+  border-bottom: 6px solid ${colors.orangeBrown};
 `;
 
 export const Content = styled.div`

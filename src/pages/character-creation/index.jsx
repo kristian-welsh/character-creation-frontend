@@ -1,7 +1,7 @@
 import * as S from "./styled.js";
 import { Link } from "react-router-dom";
 
-import Quote from "./../../components/quote/index.jsx";
+import Quote from "./../../components/quote";
 
 const CharacterCreation = () => {
   return (
