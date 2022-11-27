@@ -7,9 +7,14 @@ const CharacterCreation = () => {
   return (
     <S.Wrapper>
       <Quote text={"Character Creation"} />
-      <Link to="/character-form">
-        <S.LinkText>Create a new character</S.LinkText>
-      </Link>
+      <S.Links>
+        <Link to="/character-form">
+          <S.LinkText>Create a new character</S.LinkText>
+        </Link>
+        <Link to="/character-vault">
+          <S.LinkText>Edit a character</S.LinkText>
+        </Link>
+      </S.Links>
     </S.Wrapper>
   );
 };
