@@ -15,6 +15,7 @@ export const StyledForm = styled.form`
 
 export const Field = styled.div`
   display: flex;
+  align-items: center;
 `;
 
 export const Row = styled.div`
@@ -22,6 +23,7 @@ export const Row = styled.div`
   gap: 10px;
 `;
 
-export const Text = styled(T.P6)`
+export const Text = styled(T.P7)`
   min-width: 200px;
+  margin-right: -20px;
 `;
