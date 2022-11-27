@@ -1,7 +1,8 @@
 import * as S from "./styled";
 
-import InputText from "./../../components/input-text";
 import Button from "./../../components/button";
+import InputDropdown from "./../../components/input-dropdown";
+import InputText from "./../../components/input-text";
 import Quote from "./../../components/quote";
 
 const CharacterFoundations = ({
@@ -9,6 +10,28 @@ const CharacterFoundations = ({
   setCharacterDetails,
   handleSubmit,
 }) => {
+  const levelOptions = [];
+  for (let i = 1; i <= 20; i++) {
+    levelOptions.push(i);
+  }
+
+  const ancestryOptions = ["Dwarf", "Elf", "Human"];
+
+  const classOptions = [
+    "Barbarian",
+    "Bard",
+    "Cleric",
+    "Druid",
+    "Fighter",
+    "Monk",
+    "Paladin",
+    "Ranger",
+    "Rogue",
+    "Sorceror",
+    "Warlock",
+    "Wizard",
+  ];
+
   return (
     <S.Wrapper>
       <Quote text={"Character Foundations"} />
@@ -20,20 +43,47 @@ const CharacterFoundations = ({
               updateValue={(value) =>
                 setCharacterDetails({
                   ...characterDetails,
-                  characterName: value,
+                  name: value,
                 })
               }
             />
           </S.Field>
           <S.Field>
             <S.Text>Character Level:</S.Text>
-            <InputText
+            <InputDropdown
               updateValue={(value) =>
                 setCharacterDetails({
                   ...characterDetails,
-                  characterLevel: value,
+                  level: value,
                 })
               }
+              options={levelOptions}
+            />
+          </S.Field>
+        </S.Row>
+        <S.Row>
+          <S.Field>
+            <S.Text>Ancestry:</S.Text>
+            <InputDropdown
+              updateValue={(value) =>
+                setCharacterDetails({
+                  ...characterDetails,
+                  Ancestry: value,
+                })
+              }
+              options={ancestryOptions}
+            />
+          </S.Field>
+          <S.Field>
+            <S.Text>Class:</S.Text>
+            <InputDropdown
+              updateValue={(value) =>
+                setCharacterDetails({
+                  ...characterDetails,
+                  Ancestry: value,
+                })
+              }
+              options={classOptions}
             />
           </S.Field>
         </S.Row>
