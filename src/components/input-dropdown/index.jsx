@@ -1,10 +1,9 @@
 import * as S from "./styled.js";
 
-const InputDropdown = ({ updateValue, value, placeholder, options }) => {
+const InputDropdown = ({ updateValue, value, options }) => {
   function handleChange(e) {
     updateValue(e.target.value);
   }
-
   return (
     <>
       <S.SelectBox
@@ -15,8 +14,10 @@ const InputDropdown = ({ updateValue, value, placeholder, options }) => {
         value={value}
       >
         {options
-          ? options.map((option) => (
-              <S.StyledOption value={option}>{option}</S.StyledOption>
+          ? options.map((option, i) => (
+              <S.StyledOption value={option} key={i}>
+                {option}
+              </S.StyledOption>
             ))
           : null}
       </S.SelectBox>

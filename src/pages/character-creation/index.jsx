@@ -9,7 +9,7 @@ const CharacterCreation = () => {
       <Quote text={"Character Creation"} />
       <S.Links>
         <Link to="/character-form">
-          <S.LinkText>Create a new character</S.LinkText>
+          <S.LinkText>Create a D&D 5e character</S.LinkText>
         </Link>
         <Link to="/character-vault">
           <S.LinkText>Edit a character</S.LinkText>
