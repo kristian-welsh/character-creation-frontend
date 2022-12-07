@@ -1,3 +1,4 @@
+import { useState } from "react";
 import * as S from "./styled";
 
 import Button from "./../../components/button";
@@ -5,17 +6,28 @@ import InputDropdown from "./../../components/input-dropdown";
 import InputText from "./../../components/input-text";
 import Quote from "./../../components/quote";
 
-import { ancestryOptions, backgroundOptions, classOptions } from "./data";
+import {
+  ancestryOptions,
+  backgroundOptions,
+  classOptions,
+  maxLevel,
+} from "./data";
 
-const CharacterFoundations = ({
+const CharacterFoundations5e = ({
   characterDetails,
   setCharacterDetails,
   handleSubmit,
 }) => {
+  const [alertValidation, setAlertValidation] = useState(false);
+
   const levelOptions = [];
-  for (let i = 1; i <= 20; i++) {
+  for (let i = 1; i <= maxLevel; i++) {
     levelOptions.push(i);
   }
+
+  const submitFoundations = () => {
+    characterDetails.name ? handleSubmit() : setAlertValidation(true);
+  };
 
   return (
     <S.Wrapper>
@@ -127,9 +139,12 @@ const CharacterFoundations = ({
           </S.Field>
         </S.Row>
       </S.StyledForm>
-      <Button value="To Attributes" handleSubmit={handleSubmit} />
+      {alertValidation ? (
+        <S.Error>Please enter a character name.</S.Error>
+      ) : null}
+      <Button value="To Attributes" handleSubmit={submitFoundations} />
     </S.Wrapper>
   );
 };
 
-export default CharacterFoundations;
+export default CharacterFoundations5e;

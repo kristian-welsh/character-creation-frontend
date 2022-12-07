@@ -1,3 +1,5 @@
+export const maxLevel = 20;
+
 export const ancestryOptions = {
   Dragonborn: {
     subancestries: [
@@ -14,7 +16,7 @@ export const ancestryOptions = {
     ],
   },
   Dwarf: { subancestries: ["Hill Dwarf", "Mountain Dwarf"] },
-  Elf: { subancestries: ["High Elf", "Wood Eld", "Dark Elf/Drow"] },
+  Elf: { subancestries: ["High Elf", "Wood Elf", "Dark Elf/Drow"] },
   Gnome: { subancestries: ["Forest Gnome", "Rock Gnome"] },
   "Half-elf": { subancestries: ["Half-elf"] },
   Halfling: { subancestries: ["Lightfoot", "Stout"] },
@@ -57,7 +59,7 @@ export const classOptions = {
   Fighter: { subclasses: ["Battle Master", "Champion", "Eldritch Knight"] },
   Monk: { subclasses: ["Four Elements", "Open Hand", "Shadow"] },
   Paladin: { subclasses: ["Ancients", "Devotion", "Vengeance"] },
-  Ranger: { subclasses: ["Beast Master", "Hunter", "sc3"] },
+  Ranger: { subclasses: ["Beast Master", "Hunter"] },
   Rogue: { subclasses: ["Arcane Trickster", "Assassin", "Thief"] },
   Sorceror: { subclasses: ["Draconic Bloodline", "Wild Magic"] },
   Warlock: { subclasses: ["Archfey", "Fiend", "Great Old One"] },

@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import * as T from "../../styles/typography";
+import { colors } from "./../../styles";
+import * as T from "./../../styles/typography";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -30,4 +31,9 @@ export const Row = styled.div`
 export const Text = styled(T.P7)`
   min-width: 200px;
   margin-right: -20px;
+`;
+
+export const Error = styled(T.P6)`
+  color: ${colors.redP1};
+  margin-bottom: 10px;
 `;
