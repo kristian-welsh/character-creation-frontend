@@ -1,11 +1,11 @@
 import { useState } from "react";
 import * as S from "./styled.js";
 
-import CharacterFormService from "./../../services/char-form-services.js";
+import { submitCharacterForm } from "../../services/char-form-services.js";
 
-import CharacterFoundations from "./../../forms/character-foundations";
+import CharacterFoundations from "../../forms/character-foundations";
 
-const CharacterForm = () => {
+const CharacterForm5e = () => {
   const [characterDetails, setCharacterDetails] = useState({
     form: "character-details",
     level: "1",
@@ -20,7 +20,7 @@ const CharacterForm = () => {
   const handleSubmit = () => {
     console.log(characterDetails);
     setStep(step + 1);
-    CharacterFormService.sendForm(characterDetails);
+    submitCharacterForm(characterDetails);
   };
 
   return (
@@ -34,4 +34,4 @@ const CharacterForm = () => {
   );
 };
 
-export default CharacterForm;
+export default CharacterForm5e;
